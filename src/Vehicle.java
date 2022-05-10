@@ -1,15 +1,22 @@
-public class Vehicle
+abstract public class Vehicle
 {
     private int wheels;
-    public Vehicle(int wheels)
+    private int speed;
+    public Vehicle(int wheels, int speed)
     {
         this.wheels = wheels;
+        this.speed = speed;
+    }
+
+    public int getSpeed()
+    {
+        return speed;
     }
 
     public void move()
     {
-        System.out.println("This vehicle is mooing");
+        System.out.println("This vehicle is moving");
     }
 
-    abstract public
+    abstract public void speed();
 }
